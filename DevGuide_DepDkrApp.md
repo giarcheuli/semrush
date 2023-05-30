@@ -1,6 +1,7 @@
 # Developer Guide: Installation of a Docker Container and Deployment of an App
 
 
+
 - [Developer Guide: Installation of a Docker Container and Deployment of an App](#developer-guide-installation-of-a-docker-container-and-deployment-of-an-app)
   - [Overview](#overview)
   - [Preconditions](#preconditions)
@@ -54,10 +55,10 @@ mkdir quickstart_docker/docker/application
 The structure of the directories should look like this:
 
 ```python
-quickstart_docker/ - Directory for the entire project
-├──application/ - Directory for the application code
-└──docker/ - Directory for Docker system files
-└──application/ - Directory for the Dockerfile for our application
+quickstart_docker/ # Directory for the entire project
+├──application/ # Directory for the application code
+└──docker/ # Directory for Docker system files
+└──application/ # Directory for the Dockerfile for our application
 ```
 
 The "**application**" directory within the root directory holds your application code, while the "**docker**" directory contains the Docker-related files. 
@@ -172,3 +173,4 @@ python                 3.6         05sob8636w3f   6 weeks ago    153MB
 [def]: #developer-guide-installation-of-a-docker-container-and-deployment-of-an-app
 [def2]: #developer-guide-installation-of-a-docker-container-and-deployment-of-an-app
 [def3]: #building-the-docker-image
+[def4]: #developer-guide-installation-of-a-docker-container-and-deployment-of-an-app
