@@ -164,6 +164,7 @@ Description of the parameters:
 - CREATED: The time when the image was created.
 - SIZE: The size of the image.
 
+
 >**Note:** You can learn more about building Docker images from the [official Docker documentation](https://docs.docker.com/engine/reference/builder/)
 ___
 ## Deploying the App to the Repository
