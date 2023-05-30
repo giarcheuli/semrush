@@ -1,23 +1,30 @@
+
+
 # Developer Guide: Installation of a Docker Container and Deployment of an App
 
 - [Developer Guide: Installation of a Docker Container and Deployment of an App](#developer-guide-installation-of-a-docker-container-and-deployment-of-an-app)
-  - [Overview](#overview)
-  - [Preconditions](#preconditions)
-  - [Creating a directory structure](#creating-a-directory-structure)
+  - [Getting started](#getting-started)
+    - [Preconditions](#preconditions)
+  - [Creating a directory structure for the deployment](#creating-a-directory-structure-for-the-deployment)
   - [Deploying the Application](#deploying-the-application)
-    - [Building the Docker Image](#building-the-docker-image)
+  - [Setting up the environment for docker](#setting-up-the-environment-for-docker)
+  - [Creating the Dockerfile](#creating-the-dockerfile)
+  - [Building the Docker Image](#building-the-docker-image)
+  - [Deploying the App to the Repository](#deploying-the-app-to-the-repository)
 
-## Overview
+
+
+## Getting started
 
 This guide will walk you through deploying your application as a Docker Container in a Kubernetes cluster. Following these step-by-step instructions, you can efficiently set up your ExampleApp to accept requests on port 8800.
 
-## Preconditions
+### Preconditions
 
 Before proceeding with the deployment process, please ensure you have Docker installed on your machine.
 
 If you haven't installed Docker yet, please follow the official documentation for instructions on installing it on your specific operating system.
 
-## Creating a directory structure
+## Creating a directory structure for the deployment
 
 To ensure a structured deployment of your Docker container, follow these instructions and execute the commands respectively in your terminal to create the necessary directories:
 
@@ -90,18 +97,21 @@ Follow the steps below:
 
    # This line starts the server and makes it listen for incoming requests indefinitely.
    httpd.serve_forever()
+   ```
 
 Running this code will start a web server that listens on port 8000 and serves the requested content.
 
-## Setting up the OS, Environment, and Dependencies
+
+## Setting up the environment for docker
 
 For our application to function, it needs a runtime environment specific to the programming language it was written in. In our case, `exampleapp.py` is written in Python. Hence, we will set up the environment using Python.
 
-This section will guide you through the steps to download the necessary resources from Docker Hub and set up a working environment for your app with the required operating system and dependencies.
+Download the necessary resources from Docker Hub and set up a working environment for your app with the required operating system and dependencies.
 
-Let me know when you're ready for the next section.
+>Technical writers note: _In the context of the manual, it is recommended to provide more specific instructions or guidance on the required dependencies or resources that need to be downloaded. This will help users understand what they need to install or include to create the appropriate environment for their application._
 
-### Creating the Dockerfile
+
+## Creating the Dockerfile
 
 To start setting up the environment for our app, we need to create a Dockerfile in the `quickstart_docker/docker/application` directory. The Dockerfile is a text document that contains all the commands required to assemble an image.
 
@@ -127,7 +137,7 @@ Follow these steps:
    CMD ["python", "/app/application.py"]
    ```
 
-### Building the Docker Image
+## Building the Docker Image
 
 To build a Docker Image, execute the command that specifies the directory, the path to the Dockerfile, and a value for tagging the created image.
 
@@ -147,14 +157,26 @@ The arguments used in the command are as follows:
 
 To preview the built images in the terminal, execute the following command:
 
-```bash
+```python
 docker images
 ```
 
 You should see output similar to this:
 
-```
+```python
 REPOSITORY             TAG         IMAGE ID       CREATED        SIZE
 exampleapp             latest      83wse0edc28a   2 seconds ago  153MB
 python                 3.6         05sob8636w3f   6 weeks ago    153MB
 ```
+
+Description of the parameters:
+
+- REPOSITORY: The name of the repository where the image is stored.
+- TAG: The tag assigned to the image (e.g., latest).
+- IMAGE ID: The unique identifier of the image.
+- CREATED: The time when the image was created.
+- SIZE: The size of the image.
+
+## Deploying the App to the Repository
+
+The final step is to push the image to the repository. Please follow the repository-specific instructions to complete this step.
