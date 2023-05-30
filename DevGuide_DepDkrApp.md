@@ -8,8 +8,8 @@
   - [Creating a directory structure for the deployment](#creating-a-directory-structure-for-the-deployment)
   - [Deploying the Application](#deploying-the-application)
   - [Setting up the environment for docker](#setting-up-the-environment-for-docker)
-  - [Creating the Dockerfile](#creating-the-dockerfile)
-  - [Building the Docker Image](#building-the-docker-image)
+    - [Creating the Dockerfile](#creating-the-dockerfile)
+    - [Building the Docker Image](#building-the-docker-image)
   - [Deploying the App to the Repository](#deploying-the-app-to-the-repository)
 
 
@@ -111,7 +111,7 @@ Download the necessary resources from Docker Hub and set up a working environmen
 >Technical writers note: _In the context of the manual, it is recommended to provide more specific instructions or guidance on the required dependencies or resources that need to be downloaded. This will help users understand what they need to install or include to create the appropriate environment for their application._
 
 
-## Creating the Dockerfile
+### Creating the Dockerfile
 
 To start setting up the environment for our app, we need to create a Dockerfile in the `quickstart_docker/docker/application` directory. The Dockerfile is a text document that contains all the commands required to assemble an image.
 
@@ -137,7 +137,7 @@ Follow these steps:
    CMD ["python", "/app/application.py"]
    ```
 
-## Building the Docker Image
+### Building the Docker Image
 
 To build a Docker Image, execute the command that specifies the directory, the path to the Dockerfile, and a value for tagging the created image.
 
