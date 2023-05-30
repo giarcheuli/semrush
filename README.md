@@ -1,8 +1,8 @@
 
-# Developer Guide: Launching a Docker Container and Deploying an App in a Kubernetes Cluster
+# Developer Guide: How to set up a Docker container and deploy an application using Kubernetes
 
 
-- [Developer Guide: Launching a Docker Container and Deploying an App in a Kubernetes Cluster](#developer-guide-launching-a-docker-container-and-deploying-an-app-in-a-kubernetes-cluster)
+- [Developer Guide: How to set up a Docker container and deploy an application using Kubernetes](#developer-guide-how-to-set-up-a-docker-container-and-deploy-an-application-using-kubernetes)
   - [Getting started](#getting-started)
     - [Preconditions](#preconditions)
   - [Creating a directory structure for the deployment](#creating-a-directory-structure-for-the-deployment)
@@ -14,18 +14,20 @@
 ____
 ## Getting started
 
-This guide will walk you through launching a Docker Container and deploying an app in a Kubernetes cluster. Following these step-by-step instructions, you can set up your ExampleApp to accept requests on port 8800.
+This guide will walk you through setting up a Docker Container and deploying an app in a Kubernetes cluster. Following these step-by-step instructions, you can set up an application to accept requests on port 8800.
 
 ### Preconditions
 
-Before proceeding with the deployment process, please ensure you have Docker installed on your machine.
+Ensure you have Docker installed on your machine.
 
 If you haven't installed Docker yet, please follow the official [docker documentation](https://docs.docker.com/desktop/) for instructions on installing it on your specific operating system.
 ___
 
 ## Creating a directory structure for the deployment
 
-To ensure a structured deployment of your Docker container, follow these instructions and execute the commands respectively in your terminal to create the necessary directories:
+Create a directory structure to store the project files and ensure a well-organized deployment.
+
+Follow these steps and execute the commands respectively in your terminal to create the necessary directories:
 
 1. Create the root directory for your Docker setup:
 
@@ -95,7 +97,7 @@ Follow the steps below:
    httpd.serve_forever()
    ```
 
-Running this code will start a web server that listens on port 8000 and serves the requested content.
+Running this code will start a web-server that listens on port 8000 and serves the requested content.
 ___
 ## Setting up the environment for docker
 
