@@ -51,9 +51,6 @@ mkdir quickstart_docker/docker
 mkdir quickstart_docker/docker/application
 ```
 
-
-These steps ensure that you have a well-organized structure for your Docker deployment. The "application" directory within the root directory will hold your application code, while the "docker" directory will contain the Docker-related files. By maintaining this organization, you can easily differentiate between your application code and the Docker configuration, which enhances clarity and separation.
-
 The structure of the directories should look like this:
 
 ```python
@@ -62,6 +59,10 @@ quickstart_docker/ - Directory for the entire project
 └──docker/ - Directory for Docker system files
 └──application/ - Directory for the Dockerfile for our application
 ```
+
+The "**application**" directory within the root directory holds your application code, while the "**docker**" directory contains the Docker-related files. 
+
+> **Note:** A well-organized structure for your Docker deployment helps differentiate between your application code and Docker configuration, enhancing clarity and streamlining future project work.
 
 ## Deploying the Application
 
