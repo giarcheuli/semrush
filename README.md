@@ -1,8 +1,8 @@
 
-# Developer Guide: Installation of a Docker Container and Deployment of an App
+# Developer Guide: Launching a Docker Container and Deploying an App in a Kubernetes Cluster
 
 
-- [Developer Guide: Installation of a Docker Container and Deployment of an App](#developer-guide-installation-of-a-docker-container-and-deployment-of-an-app)
+- [Developer Guide: Launching a Docker Container and Deploying an App in a Kubernetes Cluster](#developer-guide-launching-a-docker-container-and-deploying-an-app-in-a-kubernetes-cluster)
   - [Getting started](#getting-started)
     - [Preconditions](#preconditions)
   - [Creating a directory structure for the deployment](#creating-a-directory-structure-for-the-deployment)
