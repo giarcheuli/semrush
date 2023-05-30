@@ -1,8 +1,8 @@
 
-# Developer Guide: How to set up a Docker container and deploy an application using Kubernetes
+# Developer Guide: How to set up a Docker container and deploy an application in a Kubernetes cluster
 
 
-- [Developer Guide: How to set up a Docker container and deploy an application using Kubernetes](#developer-guide-how-to-set-up-a-docker-container-and-deploy-an-application-using-kubernetes)
+- [Developer Guide: How to set up a Docker container and deploy an application in a Kubernetes cluster](#developer-guide-how-to-set-up-a-docker-container-and-deploy-an-application-in-a-kubernetes-cluster)
   - [Getting started](#getting-started)
     - [Preconditions](#preconditions)
   - [Creating a directory structure for the deployment](#creating-a-directory-structure-for-the-deployment)
@@ -11,6 +11,7 @@
     - [Creating the Dockerfile](#creating-the-dockerfile)
     - [Building the Docker Image](#building-the-docker-image)
   - [Deploying the App to the Repository](#deploying-the-app-to-the-repository)
+    - [Questions by Technical Writer](#questions-by-technical-writer)
 ____
 ## Getting started
 
@@ -170,3 +171,9 @@ ___
 ## Deploying the App to the Repository
 
 The final step is to push the image to the repository. Please follow the repository-specific instructions to complete this step.
+
+### Questions by Technical Writer
+
+1. What are the specific services and applications being migrated to the cloud infrastructure using Kubernetes?
+2. Can you provide more details about the target Kubernetes cluster?
+3. Are there any specific versions or dependencies for Docker that need to be installed?
