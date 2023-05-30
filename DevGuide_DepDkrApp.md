@@ -1,56 +1,48 @@
 # Developer Guide: Installation of a Docker Container and Deployment of an App
 
-
-
 - [Developer Guide: Installation of a Docker Container and Deployment of an App](#developer-guide-installation-of-a-docker-container-and-deployment-of-an-app)
   - [Overview](#overview)
   - [Preconditions](#preconditions)
-  - [Create Directories](#create-directories)
+  - [Creating a directory structure](#creating-a-directory-structure)
   - [Deploying the Application](#deploying-the-application)
     - [Building the Docker Image](#building-the-docker-image)
-
-
 
 ## Overview
 
 This guide will walk you through deploying your application as a Docker Container in a Kubernetes cluster. Following these step-by-step instructions, you can efficiently set up your ExampleApp to accept requests on port 8800.
 
-
 ## Preconditions
 
-Before proceeding with the deployment process, please ensure you have Docker installed on your machine. 
+Before proceeding with the deployment process, please ensure you have Docker installed on your machine.
 
 If you haven't installed Docker yet, please follow the official documentation for instructions on installing it on your specific operating system.
 
+## Creating a directory structure
 
-## Create Directories
+To ensure a structured deployment of your Docker container, follow these instructions and execute the commands respectively in your terminal to create the necessary directories:
 
-To ensure a structured deployment of your Docker container, follow these instructions to create the necessary directories:
+1. Create the root directory for your Docker setup:
+   <br>
+   - `mkdir quickstart_docker`
+<br>
 
-1. Open your terminal and execute the following command to create the root directory for your Docker setup:
-
-```python
-mkdir quickstart_docker
-```
-
-
-2. Create the "application" directory within the root directory. This directory will hold your application code:
-
-```python
-mkdir quickstart_docker/application
-```
+2. Create the "application" directory within the root directory to hold your application code:
+   <br>
+   - `mkdir quickstart_docker/application`
+<br>
 
 3. Create the "docker" directory within the root directory. This directory will contain the Docker-related files:
-
-```python
-mkdir quickstart_docker/docker
-```
+<br>
+   -  `mkdir quickstart_docker/docker`
+<br>
+   
 
 4. Create the "application" directory within the "docker" directory. This directory will be used to store any specific files related to the Docker configuration for your application:
+ <br>
+   -  `mkdir quickstart_docker/docker/application`
 
-```python
-mkdir quickstart_docker/docker/application
-```
+<br>
+
 
 The structure of the directories should look like this:
 
@@ -61,13 +53,13 @@ quickstart_docker/ # Directory for the entire project
 └──application/ # Directory for the Dockerfile for our application
 ```
 
-The "**application**" directory within the root directory holds your application code, while the "**docker**" directory contains the Docker-related files. 
+The "**application**" directory within the root directory holds your application code, while the "**docker**" directory contains the Docker-related files.
 
 > **Note:** A well-organized structure for your Docker deployment helps differentiate between your application code and Docker configuration, enhancing clarity and streamlining future project work.
 
 ## Deploying the Application
 
-To deploy an app on a Docker container, we will use the `application.py` file as an example. 
+To deploy an app on a Docker container, we will use the `application.py` file as an example.
 
 Follow the steps below:
 
@@ -98,7 +90,6 @@ Follow the steps below:
 
    # This line starts the server and makes it listen for incoming requests indefinitely.
    httpd.serve_forever()
-
 
 Running this code will start a web server that listens on port 8000 and serves the requested content.
 
@@ -135,6 +126,7 @@ Follow these steps:
    # Execute 'python /app/application.py' when the container launches
    CMD ["python", "/app/application.py"]
    ```
+
 ### Building the Docker Image
 
 To build a Docker Image, execute the command that specifies the directory, the path to the Dockerfile, and a value for tagging the created image.
@@ -151,7 +143,7 @@ The arguments used in the command are as follows:
 - `-f docker/application/Dockerfile`: Specifies the path to the Dockerfile.
 - `-t exampleapp`: Tags the built image as "exampleapp".
 
->Note: You can learn more about building Docker images from the [official Docker documentation](https://docs.docker.com/engine/reference/builder/) 
+>Note: You can learn more about building Docker images from the [official Docker documentation](https://docs.docker.com/engine/reference/builder/)
 
 To preview the built images in the terminal, execute the following command:
 
@@ -166,11 +158,3 @@ REPOSITORY             TAG         IMAGE ID       CREATED        SIZE
 exampleapp             latest      83wse0edc28a   2 seconds ago  153MB
 python                 3.6         05sob8636w3f   6 weeks ago    153MB
 ```
-
-
-
-
-[def]: #developer-guide-installation-of-a-docker-container-and-deployment-of-an-app
-[def2]: #developer-guide-installation-of-a-docker-container-and-deployment-of-an-app
-[def3]: #building-the-docker-image
-[def4]: #developer-guide-installation-of-a-docker-container-and-deployment-of-an-app
