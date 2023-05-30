@@ -14,7 +14,7 @@
 ____
 ## Getting started
 
-This guide will walk you through setting up a Docker Container and deploying an app in a Kubernetes cluster. Following these step-by-step instructions, you can set up an application to accept requests on port 8800.
+Get started with Docker container deployment using this guide. Learn to set up the directory structure, configure the Dockerfile, build the image, and deploy your application effortlessly.
 
 ### Preconditions
 
