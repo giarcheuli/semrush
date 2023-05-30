@@ -20,7 +20,7 @@ This guide will walk you through launching a Docker Container and deploying an a
 
 Before proceeding with the deployment process, please ensure you have Docker installed on your machine.
 
-If you haven't installed Docker yet, please follow the official documentation for instructions on installing it on your specific operating system.
+If you haven't installed Docker yet, please follow the official [docker documentation](https://docs.docker.com/desktop/) for instructions on installing it on your specific operating system.
 ___
 
 ## Creating a directory structure for the deployment
