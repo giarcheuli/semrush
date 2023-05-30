@@ -1,6 +1,7 @@
 
 # Developer Guide: Installation of a Docker Container and Deployment of an App
 
+
 - [Developer Guide: Installation of a Docker Container and Deployment of an App](#developer-guide-installation-of-a-docker-container-and-deployment-of-an-app)
   - [Getting started](#getting-started)
     - [Preconditions](#preconditions)
@@ -10,16 +11,17 @@
     - [Creating the Dockerfile](#creating-the-dockerfile)
     - [Building the Docker Image](#building-the-docker-image)
   - [Deploying the App to the Repository](#deploying-the-app-to-the-repository)
-
+____
 ## Getting started
 
-This guide will walk you through deploying your application as a Docker Container in a Kubernetes cluster. Following these step-by-step instructions, you can efficiently set up your ExampleApp to accept requests on port 8800.
+This guide will walk you through launching a Docker Container and deploying an app in a Kubernetes cluster. Following these step-by-step instructions, you can set up your ExampleApp to accept requests on port 8800.
 
 ### Preconditions
 
 Before proceeding with the deployment process, please ensure you have Docker installed on your machine.
 
 If you haven't installed Docker yet, please follow the official documentation for instructions on installing it on your specific operating system.
+___
 
 ## Creating a directory structure for the deployment
 
@@ -57,7 +59,7 @@ quickstart_docker/ # Directory for the entire project
 The "**application**" directory within the root directory holds your application code, while the "**docker**" directory contains the Docker-related files.
 
 > **Note:** A well-organized structure for your Docker deployment helps differentiate between your application code and Docker configuration, enhancing clarity and streamlining future project work.
-
+___
 ## Deploying the Application
 
 To deploy an app on a Docker container, we will use the `application.py` file as an example.
@@ -94,7 +96,7 @@ Follow the steps below:
    ```
 
 Running this code will start a web server that listens on port 8000 and serves the requested content.
-
+___
 ## Setting up the environment for docker
 
 To deploy your application as a Docker container, it is essential to properly set up the environment. This ensures that the container has all the necessary components and dependencies to run your application smoothly. This section will guide you through the process of creating a Dockerfile and building the Docker image for your application.
@@ -161,7 +163,7 @@ Description of the parameters:
 - SIZE: The size of the image.
 
 >**Note:** You can learn more about building Docker images from the [official Docker documentation](https://docs.docker.com/engine/reference/builder/)
-
+___
 ## Deploying the App to the Repository
 
 The final step is to push the image to the repository. Please follow the repository-specific instructions to complete this step.
