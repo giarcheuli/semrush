@@ -1,5 +1,4 @@
 
-
 # Developer Guide: Installation of a Docker Container and Deployment of an App
 
 - [Developer Guide: Installation of a Docker Container and Deployment of an App](#developer-guide-installation-of-a-docker-container-and-deployment-of-an-app)
@@ -11,8 +10,6 @@
     - [Creating the Dockerfile](#creating-the-dockerfile)
     - [Building the Docker Image](#building-the-docker-image)
   - [Deploying the App to the Repository](#deploying-the-app-to-the-repository)
-
-
 
 ## Getting started
 
@@ -29,27 +26,24 @@ If you haven't installed Docker yet, please follow the official documentation fo
 To ensure a structured deployment of your Docker container, follow these instructions and execute the commands respectively in your terminal to create the necessary directories:
 
 1. Create the root directory for your Docker setup:
-   <br>
+
    - `mkdir quickstart_docker`
-<br>
+>
 
 2. Create the "application" directory within the root directory to hold your application code:
-   <br>
+
    - `mkdir quickstart_docker/application`
-<br>
+>
 
 3. Create the "docker" directory within the root directory. This directory will contain the Docker-related files:
-<br>
-   -  `mkdir quickstart_docker/docker`
-<br>
-   
+
+   - `mkdir quickstart_docker/docker`
+>
 
 4. Create the "application" directory within the "docker" directory. This directory will be used to store any specific files related to the Docker configuration for your application:
- <br>
-   -  `mkdir quickstart_docker/docker/application`
 
-<br>
-
+   - `mkdir quickstart_docker/docker/application`
+>
 
 The structure of the directories should look like this:
 
@@ -101,24 +95,17 @@ Follow the steps below:
 
 Running this code will start a web server that listens on port 8000 and serves the requested content.
 
-
 ## Setting up the environment for docker
 
-For our application to function, it needs a runtime environment specific to the programming language it was written in. In our case, `exampleapp.py` is written in Python. Hence, we will set up the environment using Python.
-
-Download the necessary resources from Docker Hub and set up a working environment for your app with the required operating system and dependencies.
-
->Technical writers note: _In the context of the manual, it is recommended to provide more specific instructions or guidance on the required dependencies or resources that need to be downloaded. This will help users understand what they need to install or include to create the appropriate environment for their application._
-
+To deploy your application as a Docker container, it is essential to properly set up the environment. This ensures that the container has all the necessary components and dependencies to run your application smoothly. This section will guide you through the process of creating a Dockerfile and building the Docker image for your application.
 
 ### Creating the Dockerfile
 
-To start setting up the environment for our app, we need to create a Dockerfile in the `quickstart_docker/docker/application` directory. The Dockerfile is a text document that contains all the commands required to assemble an image.
+The Dockerfile is a crucial component that defines the configuration and setup of your Docker container. To begin setting up the environment, navigate to the `quickstart_docker/docker/application` directory and follow these steps:
 
-Follow these steps:
+Create a file named `Dockerfile` in the `quickstart_docker/docker/application` directory.
 
-1. Navigate to `quickstart_docker/docker/application`.
-2. Create a Dockerfile with the following content:
+Open the `Dockerfile` and add the following content:
 
    ```dockerfile
    # Use base image from the registry
@@ -139,23 +126,19 @@ Follow these steps:
 
 ### Building the Docker Image
 
-To build a Docker Image, execute the command that specifies the directory, the path to the Dockerfile, and a value for tagging the created image.
+Once you have the Dockerfile ready, it's time to build the Docker image. Building the image involves assembling all the necessary dependencies and configurations specified in the Dockerfile. Follow these steps to build the Docker image:
 
-In the terminal, execute the following command:
+1. Open your terminal and navigate to the root directory of your project.
+
+2. Execute the following command:
 
 ```python
 docker build . -f docker/application/Dockerfile -t exampleapp
 ```
 
-The arguments used in the command are as follows:
+This command tells Docker to build the image using the Dockerfile located at docker/application/Dockerfile and tag it as exampleapp.
 
-- `.`: The build context, which is the current directory.
-- `-f docker/application/Dockerfile`: Specifies the path to the Dockerfile.
-- `-t exampleapp`: Tags the built image as "exampleapp".
-
->Note: You can learn more about building Docker images from the [official Docker documentation](https://docs.docker.com/engine/reference/builder/)
-
-To preview the built images in the terminal, execute the following command:
+3. Wait for the build process to complete. Once finished, you can preview the built images by running the command:
 
 ```python
 docker images
@@ -176,6 +159,8 @@ Description of the parameters:
 - IMAGE ID: The unique identifier of the image.
 - CREATED: The time when the image was created.
 - SIZE: The size of the image.
+
+>**Note:** You can learn more about building Docker images from the [official Docker documentation](https://docs.docker.com/engine/reference/builder/)
 
 ## Deploying the App to the Repository
 
